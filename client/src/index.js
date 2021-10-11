@@ -12,6 +12,7 @@ import './index.css';
 
 const Container = styled.div`
   text-align: center;
+  width: 100vw;
 `;
 
 const AppHeader = styled.header`
@@ -25,13 +26,6 @@ const Logo = styled.img`
   height: 80px;
 `;
 
-const Debug = styled.a`
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  color: white;
-`;
-
 const App = () => {
   return (
     <ApolloProvider client={client}>
@@ -39,13 +33,6 @@ const App = () => {
         <AppHeader>
           <Logo src={logo} className="App-logo" alt="logo" />
           <h1>Cars Collection</h1>
-          <Debug
-            href={`http://localhost:${process.env.REACT_APP_SERVER_PORT}/graphql`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Debug
-          </Debug>
         </AppHeader>
         <Cars />
       </Container>

@@ -38,4 +38,8 @@ export default Cars;
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1800px;
+  align-content: center;
+  justify-content: space-around;
 `;

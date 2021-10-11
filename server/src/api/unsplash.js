@@ -19,7 +19,6 @@ const handler = async parameters => {
     const unsplashResponse = await unsplashApi.get(url, {
       params: { page, per_page: perPage, query: encodeURIComponent(query) }
     });
-    console.log('====', unsplashResponse.data.results[2]);
     return unsplashResponse.data.results.map(item => transformCarData(item));
   } catch (error) {
     return { error };

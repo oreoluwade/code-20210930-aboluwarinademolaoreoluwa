@@ -10,7 +10,7 @@ const Car = ({ carDetails }) => {
         width={300}
         height={300}
       />
-      <h5>Tags: {carDetails.tags}</h5>
+      <StyledCarDetails>Tags: {carDetails.tags}</StyledCarDetails>
     </StyledCard>
   );
 };
@@ -26,6 +26,13 @@ const StyledCard = styled.div`
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const StyledCarDetails = styled.h5`
+  max-width: 270px;
+  text-overflow: ellipsis;
 `;
 
 
