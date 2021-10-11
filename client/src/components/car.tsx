@@ -1,7 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Car = ({ carDetails }) => {
+type CarDetailsPropType = {
+  carDetails: {
+    id: string,
+    title: string,
+    image: string,
+    webFormatURL: string,
+    description: string,
+    tags: string
+  }
+}
+
+const Car = ({ carDetails }: CarDetailsPropType) => {
   return (
     <StyledCard>
       <img
