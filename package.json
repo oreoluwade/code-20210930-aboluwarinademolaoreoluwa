@@ -5,8 +5,7 @@
     "setup": "yarn && (cd client && yarn)",
     "client": "cd client && yarn start",
     "server": "nodemon --ignore ./client server/src/server.js",
-    "dev": "REACT_APP_SERVER_PORT=$(./scripts/get-available-port.sh) concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "test": "jest server/ && (cd client && yarn test)"
+    "dev": "REACT_APP_SERVER_PORT=$(./scripts/get-available-port.sh) concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "@types/jest": "^27.0.2",

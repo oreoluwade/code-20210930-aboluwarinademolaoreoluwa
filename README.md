@@ -13,8 +13,3 @@ yarn && (cd client && yarn)
 yarn dev
 ```
 
-## Tests
-
-```
-yarn test
-```
